@@ -9,13 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            Color(red: 19/255, green: 30/255, blue: 53/255, opacity: 1.0).ignoresSafeArea()
+            
+            VStack {
+                Image("AppLogo").resizable().aspectRatio(contentMode: .fit).frame(width: 250)
+                
+                StartAndRegisterView()
+            }
         }
-        .padding()
+    }
+}
+
+struct StartAndRegisterView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Login")
+                Text("Sign in")
+            }
+        }
     }
 }
 
