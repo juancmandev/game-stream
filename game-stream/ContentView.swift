@@ -85,9 +85,23 @@ struct LoginView: View {
                 }
                 
                 Divider().frame(height: 1).background(Color("DarkCian"))
+                
+                Divider().frame(height: 8)
+                
+                Text("Forget password?").foregroundColor(Color("DarkCian")).font(.footnote).frame(width: 300, alignment: .trailing)
+                
+                Divider().frame(height: 20)
+                
+                Button(action: logIn, label: { Text("LOG IN").fontWeight(.bold).foregroundColor(.white).frame(maxWidth: .infinity, alignment: .center).padding(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16)).overlay(RoundedRectangle(cornerRadius: 8).stroke(Color("DarkCian"), lineWidth: 2).shadow(color: .white, radius: 8)) })
+                
+                Text("Log in with Social Media").foregroundColor(.white)
             }.padding(.horizontal, 32)
         }
     }
+}
+
+func logIn() {
+    print("Log in")
 }
 
 struct SignInView: View {
